@@ -1,0 +1,18 @@
+{
+    "name": "underprime",
+    "version": "0.0.0",
+    "description": "Underscore - Prime'd by MooTools Prime",
+    "main": "index.js",
+    "repository": "",
+    "author": "Garrick Cheung",
+    "license": "MIT",
+    "dependencies": {
+        "prime": "*"
+    },
+    "devDependencies": {
+        "buster": "*"
+    },
+    "scripts": {
+        "test": "node_modules/.bin/buster-test"
+    }
+}

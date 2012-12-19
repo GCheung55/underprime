@@ -1,9 +1,9 @@
-var array = require('prime/es5/array');
+var list = require('prime/collection/list');
 
-array.implement({
+list.implement({
     first: function(n) {
         return (n != null) ? this.slice(0, n) : this[0];
     }
 });
 
-module.exports = array;
+module.exports = list;

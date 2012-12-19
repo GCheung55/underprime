@@ -1,4 +1,4 @@
-var array = require('prime/es5/array');
+var list = require('prime/collection/list');
 
 require('./first');
 require('./initial');
@@ -19,4 +19,4 @@ require('./pluck');
 require('./max');
 require('./range');
 
-module.exports = array;
+module.exports = list;

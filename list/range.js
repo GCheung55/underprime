@@ -1,6 +1,6 @@
-var array = require('prime/es5/array');
+var list = require('prime/collection/list');
 
-array.implement({
+list.implement({
     range: function(start, end, step) {
         start = +start || 0;
         step = +step || 1;
@@ -23,4 +23,4 @@ array.implement({
     }
 });
 
-module.exports = array;
+module.exports = list;

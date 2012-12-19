@@ -1,11 +1,11 @@
 var buster = require('buster');
-var array = require('../array');
+var list = require('../list');
 var _ = require('../');
 
-buster.testCase('underprime - array', {
+buster.testCase('underprime - list', {
 
-    'array exists': function(){
-        buster.assert( array );
+    'list exists': function(){
+        buster.assert( list );
     },
 
     'first()': {
@@ -252,7 +252,7 @@ buster.testCase('underprime - array', {
         ,
 
         'handles nulls': function(){
-            buster.assert.equals(array.object(null), {});
+            buster.assert.equals(list.object(null), {});
             // ok(_.isEqual(_.object(null), {}), 'handles nulls');
         }
     },

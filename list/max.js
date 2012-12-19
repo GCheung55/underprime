@@ -1,7 +1,7 @@
-var array = require('prime/es5/array'),
+var list = require('prime/collection/list'),
     type = require('prime/util/type');
 
-array.implement({
+list.implement({
     max: function(callback, thisArg) {
         var computed = -Infinity,
             index = -1,
@@ -18,7 +18,7 @@ array.implement({
                     return callback.call(thisArg, value, index, object);
                 };
 
-            array.forEach(this, function(value, index, collection) {
+            list.forEach(this, function(value, index, collection) {
                 var current = cb(value, index, collection);
                 if(current > computed) {
                     computed = current;
@@ -36,4 +36,4 @@ array.implement({
     }
 });
 
-module.exports = array;
+module.exports = list;

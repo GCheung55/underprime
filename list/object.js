@@ -1,6 +1,6 @@
-var array = require('prime/es5/array');
+var list = require('prime/collection/list');
 
-array.implement({
+list.implement({
     object: function(values) {
         var index = -1,
             length = this.length,
@@ -18,4 +18,4 @@ array.implement({
     }
 });
 
-module.exports = array;
+module.exports = list;

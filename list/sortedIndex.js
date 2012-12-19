@@ -1,7 +1,7 @@
-var array = require('prime/es5/array'),
+var list = require('prime/collection/list'),
     type = require('prime/util/type');
 
-array.implement({
+list.implement({
     sortedIndex: function(value, callback, thisArg) {
         var low = 0,
             high = this.length;
@@ -26,4 +26,4 @@ array.implement({
     }
 });
 
-module.exports = array;
+module.exports = list;

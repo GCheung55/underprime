@@ -6,27 +6,17 @@ require('./last');
 require('./rest');
 require('./compact');
 require('./flatten');
-require('./difference');
 require('./without');
 require('./union');
+require('./intersection');
+require('./difference');
 require('./uniq');
+require('./zip');
+require('./object');
+require('./sortedIndex');
 
-array.implement({
-    intersection: function() {
-
-    },
-    zip: function() {
-
-    },
-    object: function() {
-
-    },
-    sortedIndex: function() {
-
-    },
-    range: function() {
-
-    }
-});
+require('./pluck');
+require('./max');
+require('./range');
 
 module.exports = array;

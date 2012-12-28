@@ -1,15 +1,16 @@
-var list = require('prime/collection/list');
+"use strict";
 
-require('./flatten');
+var list = require('prime/collection/list')
 
 list.implement({
-    difference: function() {
-        var rest = list.concat.apply(list, arguments);
+    difference: function(){
+        var rest = list.concat.apply(list, arguments)
 
         return list.filter(this, function(value){
-            return rest.indexOf(value) == -1;
-        });
-    }   
-});
+            return rest.indexOf(value) == -1
+        })
+    }
+})
 
-module.exports = list;
+require('../').implement('difference', list)
+module.exports = list.difference;

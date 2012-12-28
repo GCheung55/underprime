@@ -1,9 +1,12 @@
-var list = require('prime/collection/list');
+"use strict";
+
+var list = require('prime/collection/list')
 
 list.implement({
-    rest: function(n) {
-        return this.slice((n == null) ? 1 : n);
+    rest: function(n){
+        return this.slice((n == null) ? 1 : n)
     }
-});
+})
 
-module.exports = list;
+require('../').implement('rest', list)
+module.exports = list.rest

@@ -1,22 +1,24 @@
-var list = require('prime/collection/list');
+"use strict";
 
-require('./first');
-require('./initial');
-require('./last');
-require('./rest');
-require('./compact');
-require('./flatten');
-require('./without');
-require('./union');
-require('./intersection');
-require('./difference');
-require('./uniq');
-require('./zip');
-require('./object');
-require('./sortedIndex');
+var list = require('prime/collection/list')
 
-require('./pluck');
-require('./max');
-require('./range');
+require('./first')
+require('./initial')
+require('./last')
+require('./rest')
+require('./compact')
+require('./flatten')
+require('./without')
+require('./union')
+require('./intersection')
+require('./difference')
+require('./uniq')
+require('./zip')
+require('./object')
+require('./sortedIndex')
 
-module.exports = list;
+require('./pluck')
+require('./max')
+require('./range')
+
+module.exports = list

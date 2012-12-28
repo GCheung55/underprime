@@ -1,8 +1,10 @@
-var buster = require('buster');
-var _ = require('../');
+"use strict";
+
+var buster = require('buster')
+var _ = require('../')
 
 buster.testCase('ghost extensions', {
     '_ exists': function(){
-        buster.assert( _ );
+        buster.assert(_)
     }
-});
+})

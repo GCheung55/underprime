@@ -164,7 +164,7 @@ buster.testCase('underprime - list', {
                 var arr = [1, 2, 3],
                     test = _(arr).union([2, 30, 1], [1, 40, [1]])
 
-                buster.assert.equals(test.valueOf(), [1, 2, 3, 30, 40, [1]])
+                buster.assert.equals(test, [1, 2, 3, 30, 40, [1]])
             }
         }
     },
@@ -236,19 +236,19 @@ buster.testCase('underprime - list', {
             var result = _(['moe', 'larry', 'curly']).object([30, 40, 50]),
                 shouldBe = {moe: 30, larry: 40, curly: 50}
 
-            buster.assert.equals(result.valueOf(), shouldBe)
+            buster.assert.equals(result, shouldBe)
         },
 
         'an array of pairs zipped together into an object': function(){
             var result = _([['one', 1], ['two', 2], ['three', 3]]).object(),
                 shouldBe = {one: 1, two: 2, three: 3}
 
-            buster.assert.equals(result.valueOf(), shouldBe)
+            buster.assert.equals(result, shouldBe)
         },
 
         'an object converted to pairs and back to an object': function(){
             var stooges = {moe: 30, larry: 40, curly: 50}
-            buster.assert.equals( _(_(stooges).pairs().valueOf()).object().valueOf(), stooges )
+            buster.assert.equals(_(_(stooges).pairs()).object(), stooges)
         },
 
         'handles nulls': function(){
@@ -261,23 +261,23 @@ buster.testCase('underprime - list', {
         '35 should be inserted at index 3': function(){
             var numbers = [10, 20, 30, 40, 50], num = 35
             var indexForNum = _(numbers).sortedIndex(num)
-            buster.assert.equals(indexForNum.valueOf(), 3)
+            buster.assert.equals(indexForNum, 3)
         },
 
         '30 should be inserted at index 2': function(){
             var numbers = [10, 20, 30, 40, 50], indexFor30 = _(numbers).sortedIndex(30)
-            buster.assert.equals(indexFor30.valueOf(), 2)
+            buster.assert.equals(indexFor30, 2)
         },
 
         'other': function(){
             var objects = [{x: 10}, {x: 20}, {x: 30}, {x: 40}],
                 iterator = function(obj){ return obj.x }
-            buster.assert.equals(_(objects).sortedIndex({x: 25}, iterator).valueOf(), 2)
-            buster.assert.equals(_(objects).sortedIndex({x: 35}, 'x').valueOf(), 3)
+            buster.assert.equals(_(objects).sortedIndex({x: 25}, iterator), 2)
+            buster.assert.equals(_(objects).sortedIndex({x: 35}, 'x'), 3)
 
             var context = {1: 2, 2: 3, 3: 4}
             iterator = function(obj){ return this[obj] }
-            buster.assert.equals(_([1, 3]).sortedIndex(2, iterator, context).valueOf(), 1)
+            buster.assert.equals(_([1, 3]).sortedIndex(2, iterator, context), 1)
         }
     }
 })

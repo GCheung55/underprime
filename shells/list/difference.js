@@ -12,5 +12,4 @@ list.implement({
     }
 })
 
-require('../').implement('difference', list)
-module.exports = list.difference;
+module.exports = list

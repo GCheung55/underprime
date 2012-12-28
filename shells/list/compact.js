@@ -10,5 +10,4 @@ list.implement({
     }
 })
 
-require('../').implement('compact', list)
-module.exports = list.compact
+module.exports = list

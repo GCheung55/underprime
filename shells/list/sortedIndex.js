@@ -1,7 +1,7 @@
 "use strict";
 
 var list = require('prime/collection/list')
-var type = require('prime/util/type')
+var typeOf = require('prime/util/type')
 
 list.implement({
     sortedIndex: function(value, callback, thisArg) {
@@ -9,7 +9,7 @@ list.implement({
         var high = this.length
 
         // explicitly reference `identity` for better inlining in Firefox
-        var cb = callback ? type(callback) != 'function' ?
+        var cb = callback ? typeOf(callback) != 'function' ?
             function(object) {
                 return object[callback]
             } : function(value, index, object) {
@@ -32,5 +32,4 @@ list.implement({
     }
 })
 
-require('../').implement('sortedIndex', list)
-module.exports = list.sortedIndex
+module.exports = list

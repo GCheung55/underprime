@@ -1,7 +1,7 @@
 "use strict";
 
 var list = require('prime/collection/list')
-var type = require('prime/util/type')
+var typeOf = require('prime/util/type')
 
 list.implement({
     max: function(callback, thisArg){
@@ -9,10 +9,10 @@ list.implement({
             index = -1,
             length = this ? this.length : 0,
             result = computed,
-            typeValue = type(this), cb
+            type = typeOf(this), cb
 
-        if (callback || typeValue != 'array'){
-            cb = !callback && typeValue == 'string' ?
+        if (callback || type != 'array'){
+            cb = !callback && type == 'string' ?
                 function(value){
                     return value.charCodeAt(0)
                 } :
@@ -38,5 +38,4 @@ list.implement({
     }
 })
 
-require('../').implement('max', list)
-module.exports = list.max
+module.exports = list

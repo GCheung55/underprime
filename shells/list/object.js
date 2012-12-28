@@ -20,5 +20,4 @@ list.implement({
     }
 })
 
-require('../').implement('object', list)
-module.exports = list.object
+module.exports = list

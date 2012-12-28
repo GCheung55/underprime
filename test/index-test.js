@@ -2,8 +2,9 @@
 
 var buster = require('buster')
 var _ = require('../')
+var array = require('../list')
 
-buster.testCase('ghost extensions', {
+buster.testCase('underprime', {
 
     '_ exists': function(){
         buster.assert(_)

@@ -11,5 +11,4 @@ list.implement({
     }
 })
 
-require('../').implement('union', list)
-module.exports = list.union
+module.exports = list

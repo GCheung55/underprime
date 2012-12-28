@@ -17,5 +17,4 @@ hash.implement({
     }
 })
 
-require('../').implement('pairs', hash)
-module.exports = hash.pairs
+module.exports = hash

@@ -8,5 +8,4 @@ list.implement({
     }
 })
 
-require('../').implement('rest', list)
-module.exports = list.rest
+module.exports = list

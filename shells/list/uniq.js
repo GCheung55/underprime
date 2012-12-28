@@ -19,5 +19,4 @@ list.implement({
     }
 })
 
-require('../').implement('uniq', list)
-module.exports = list.uniq
+module.exports = list

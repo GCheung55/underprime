@@ -24,5 +24,4 @@ list.implement({
     }
 })
 
-require('../').implement('flatten', list)
-module.exports = list.flatten
+module.exports = list

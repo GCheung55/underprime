@@ -25,5 +25,4 @@ list.implement({
     }
 })
 
-require('../').implement('range', list)
-module.exports = list.range
+module.exports = list

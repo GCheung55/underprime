@@ -10,5 +10,4 @@ list.implement({
     }
 })
 
-require('../').implement('pluck', list)
-module.exports = list.pluck
+module.exports = list

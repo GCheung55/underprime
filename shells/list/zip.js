@@ -3,8 +3,8 @@
 var list = require('prime/collection/list')
 var hash = require('prime/collection/hash')
 
-var max = require('./max')
-var pluck = require('./pluck')
+var max = require('./max').max
+var pluck = require('./pluck').pluck
 
 list.implement({
     zip: function(){
@@ -22,5 +22,4 @@ list.implement({
     }
 })
 
-require('../').implement('zip', list)
-module.exports = list.zip
+module.exports = list

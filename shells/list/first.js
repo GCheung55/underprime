@@ -8,5 +8,4 @@ list.implement({
     }
 })
 
-require('../').implement('first', list)
-module.exports = list.first
+module.exports = list

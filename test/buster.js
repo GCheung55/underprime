@@ -1,6 +1,6 @@
-var config = module.exports;
+var config = module.exports
 
-config["underprime"] = {
+config.underprime = {
     rootPath: "../",
     environment: "node", // or "node"
     sources: [
@@ -10,4 +10,4 @@ config["underprime"] = {
     ],
     resources: [
     ]
-};
+}

@@ -1,11 +1,13 @@
-var list = require('prime/collection/list');
+"use strict";
 
-require('./difference');
+var list = require('prime/collection/list')
+var difference = require('./difference')
 
 list.implement({
     without: function() {
-        return list.difference(this, list.slice(arguments));
+        return difference(this, list.slice(arguments))
     }
-});
+})
 
-module.exports = list;
+require('../').implement('without', list)
+module.exports = list.without

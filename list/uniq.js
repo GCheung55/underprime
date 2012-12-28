@@ -1,20 +1,23 @@
-var list = require('prime/collection/list');
+"use strict";
+
+var list = require('prime/collection/list')
 
 list.implement({
-    uniq: function(isSorted, iterator, context) {
-        var initial = iterator ? list.map(this, iterator, context) : this,
-            results = [],
-            seen = [];
+    uniq: function(isSorted, iterator, context){
+        var initial = iterator ? list.map(this, iterator, context) : this
+        var results = []
+        var seen = []
 
-        list.forEach(initial, function(value, index) {
+        list.forEach(initial, function(value, index){
             if (isSorted ? (!index || seen[seen.length - 1] !== value) : (seen.indexOf(value) == -1)) {
-                seen.push(value);
-                results.push(this[index]);
+                seen.push(value)
+                results.push(this[index])
             }
-        }, this);
+        }, this)
 
-        return results;
+        return results
     }
-});
+})
 
-module.exports = list;
+require('../').implement('uniq', list)
+module.exports = list.uniq

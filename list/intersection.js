@@ -1,16 +1,19 @@
-var list = require('prime/collection/list');
+"use strict";
 
-require('./uniq');
+var list = require('prime/collection/list')
+
+var uniq = require('./uniq')
 
 list.implement({
     intersection: function() {
-        var rest = list.slice(arguments);
-        return list.filter(list.uniq(this), function(item) {
-            return list.every(rest, function(other) {
-                return list.indexOf(other, item) >= 0;
-            });
-        });
+        var rest = list.slice(arguments)
+        return list.filter(uniq(this), function(item){
+            return list.every(rest, function(other){
+                return list.indexOf(other, item) >= 0
+            })
+        })
     }
-});
+})
 
-module.exports = list;
+require('../').implement('intersection', list)
+module.exports = list.intersection

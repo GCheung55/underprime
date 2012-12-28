@@ -1,0 +1,9 @@
+{
+	"asi": true,
+	"eqeqeq": false,
+	"eqnull": true,
+	"loopfunc": true,
+	"boss": true,
+	"node": true,
+	"newcap": false
+}

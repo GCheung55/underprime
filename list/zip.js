@@ -1,7 +1,7 @@
 "use strict";
 
 var _ = require('../'),
-    list = require('../shells/list/zip'),
+    list = require('../shell/list/zip'),
     max = require('./max'),
     pluck = require('./pluck')
 

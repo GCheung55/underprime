@@ -1,7 +1,7 @@
 "use strict";
 
 var _ = require('../'),
-    list = require('../shells/list/compact')
+    list = require('../shell/list/compact')
 
 _.implement('compact', list)
 module.exports = _

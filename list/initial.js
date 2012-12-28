@@ -1,7 +1,7 @@
 "use strict";
 
 var _ = require('../'),
-    list = require('../shells/list/initial')
+    list = require('../shell/list/initial')
 
 _.implement('initial', list)
 module.exports = _

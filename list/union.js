@@ -1,7 +1,7 @@
 "use strict";
 
 var _ = require('../'),
-    list = require('../shells/list/union')
+    list = require('../shell/list/union')
 
 _.implement('union', list)
 module.exports = _

@@ -1,20 +1,28 @@
-var list = require('prime/collection/list');
+"use strict";
 
-var flatten = function(input, shallow, output) {
-        list.forEach(input, function(value) {
-            if (Array.isArray(value)) {
-                shallow ? output.push.apply(output, value) : flatten(value, shallow, output);
+var array = require('prime/es5/array')
+var list = require('prime/collection/list')
+
+var flatten = function(input, shallow, output){
+    list.forEach(input, function(value){
+        if (array.isArray(value)){
+            if (shallow){
+                output.push.apply(output, value)
             } else {
-                output.push(value);
+                flatten(value, shallow, output)
             }
-        });
-        return output;
-    };
+        } else {
+            output.push(value)
+        }
+    })
+    return output
+}
 
 list.implement({
     flatten: function(shallow) {
-        return flatten(this, shallow, []);
+        return flatten(this, shallow, [])
     }
-});
+})
 
-module.exports = list;
+require('../').implement('flatten', list)
+module.exports = list.flatten

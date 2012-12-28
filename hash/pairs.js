@@ -1,18 +1,21 @@
-var hash = require('prime/collection/hash');
+"use strict";
+
+var hash = require('prime/collection/hash')
 
 hash.implement({
-    pairs: function() {
-        var index = -1,
-            props = hash.keys(this),
-            length = props.length,
-            result = Array(length);
+    pairs: function(){
+        var index = -1
+        var props = hash.keys(this)
+        var length = props.length
+        var result = Array(length)
 
-        while(++index < length) {
-            var key = props[index];
-            result[index] = [key, this[key]];
+        while (++index < length){
+            var key = props[index]
+            result[index] = [key, this[key]]
         }
-        return result;
+        return result
     }
-});
+})
 
-module.exports = hash;
+require('../').implement('pairs', hash)
+module.exports = hash.pairs

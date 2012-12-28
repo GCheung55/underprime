@@ -1,21 +1,24 @@
-var list = require('prime/collection/list');
+"use strict";
+
+var list = require('prime/collection/list')
 
 list.implement({
-    object: function(values) {
-        var index = -1,
-            length = this.length,
-            result = {};
+    object: function(values){
+        var result = {}
+        var index = -1
+        var length = this && this.length || 0
 
-        while(++index < length) {
-            var key = this[index];
-            if(values) {
-                result[key] = values[index];
+        while (++index < length){
+            var key = this[index]
+            if (values) {
+                result[key] = values[index]
             } else {
-                result[key[0]] = key[1];
+                result[key[0]] = key[1]
             }
         }
-        return result;
+        return result
     }
-});
+})
 
-module.exports = list;
+require('../').implement('object', list)
+module.exports = list.object

@@ -1,22 +1,26 @@
-var list = require('prime/collection/list'),
-    hash = require('prime/collection/hash');
+"use strict";
 
-require('./max');
-require('./pluck');
+var list = require('prime/collection/list')
+var hash = require('prime/collection/hash')
+
+var max = require('./max')
+var pluck = require('./pluck')
 
 list.implement({
-    zip: function() {
-        list.splice(arguments, 0, 0, this);
+    zip: function(){
+        list.splice(arguments, 0, 0, this)
 
-        var index = -1,
-            length =  this ? list.max(list.pluck(arguments, 'length')) : 0,
-            result = Array(length);
+        var index = -1
+        var length =  this ? max(pluck(arguments, 'length')) : 0
+        var result = Array(length)
 
-        while(++index < length) {
-            result[index] = list.pluck(arguments, index);
+        while (++index < length){
+            result[index] = pluck(arguments, index)
         }
-        return result;
-    }
-});
 
-module.exports = list;
+        return result
+    }
+})
+
+require('../').implement('zip', list)
+module.exports = list.zip

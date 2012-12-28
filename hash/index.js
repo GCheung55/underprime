@@ -1,5 +1,7 @@
-var hash = require('prime/collection/hash');
+"use strict";
 
-require('./pairs');
+var hash = require('prime/collection/hash')
 
-module.exports = hash;
+require('./pairs')
+
+module.exports = hash

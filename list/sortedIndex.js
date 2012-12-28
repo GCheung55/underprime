@@ -1,29 +1,36 @@
-var list = require('prime/collection/list'),
-    type = require('prime/util/type');
+"use strict";
+
+var list = require('prime/collection/list')
+var type = require('prime/util/type')
 
 list.implement({
     sortedIndex: function(value, callback, thisArg) {
-        var low = 0,
-            high = this.length;
+        var low = 0
+        var high = this.length
 
         // explicitly reference `identity` for better inlining in Firefox
         var cb = callback ? type(callback) != 'function' ?
-        function(object) {
-            return object[callback];
-        } : function(value, index, object) {
-            return callback.call(thisArg, value, index, object);
-        } : function(value) {
-            return value;
-        };
+            function(object) {
+                return object[callback]
+            } : function(value, index, object) {
+                return callback.call(thisArg, value, index, object)
+            } : function(value) {
+                return value
+            }
 
-        value = cb(value);
+        value = cb(value)
 
-        while(low < high) {
-            var mid = (low + high) >>> 1;
-            cb(this[mid]) < value ? low = mid + 1 : high = mid;
+        while (low < high){
+            var mid = (low + high) >>> 1
+            if (cb(this[mid]) < value){
+                low = mid + 1
+            } else {
+                high = mid
+            }
         }
-        return low;
+        return low
     }
-});
+})
 
-module.exports = list;
+require('../').implement('sortedIndex', list)
+module.exports = list.sortedIndex

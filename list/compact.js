@@ -1,11 +1,14 @@
-var list = require('prime/collection/list');
+"use strict";
+
+var list = require('prime/collection/list')
 
 list.implement({
-    compact: function() {
-        return list.filter(this, function(value) {
+    compact: function(){
+        return list.filter(this, function(value){
             return !!value;
-        });
+        })
     }
-});
+})
 
-module.exports = list;
+require('../').implement('compact', list)
+module.exports = list.compact

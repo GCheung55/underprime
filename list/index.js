@@ -1,12 +1,7 @@
 "use strict";
 
 var _ = require('../'),
-    list = require('../shells/list'),
-    hash = require('prime/collection/hash')
-
-hash.each(list.prototype, function(value, key){
-    // console.log(key, value);
-})
+    list = require('../shells/list')
 
 require('./compact')
 require('./difference')

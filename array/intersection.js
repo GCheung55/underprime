@@ -1,7 +1,7 @@
 "use strict";
 
 var _ = require('../'),
-    list = require('../shell/list/intersection'),
+    list = require('../shell/array/intersection'),
     uniq = require('./uniq')
 
 

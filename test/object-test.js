@@ -1,10 +1,10 @@
 "use strict";
 
 var buster = require('buster')
-var hash = require('../hash')
+var hash = require('../object')
 var _ = require('../')
 
-buster.testCase('underprime - hash', {
+buster.testCase('underprime - object', {
 
     'hash exists': function(){
         buster.assert(hash)

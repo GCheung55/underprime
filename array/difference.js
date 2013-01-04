@@ -1,7 +1,7 @@
 "use strict";
 
-var _ = require('../'),
-    list = require('../shell/array/difference')
+var _ = require('../')
+var array = require('../shell/array/difference')
 
-_.implement('difference', list)
+_.implement('difference', array)
 module.exports = _

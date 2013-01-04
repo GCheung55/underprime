@@ -1,7 +1,7 @@
 "use strict";
 
-var _ = require('../'),
-    list = require('../shell/array/compact')
+var _ = require('../')
+var array = require('../shell/array/compact')
 
-_.implement('compact', list)
+_.implement('compact', array)
 module.exports = _

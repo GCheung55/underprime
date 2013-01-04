@@ -12,7 +12,7 @@ buster.testCase('underprime', {
 
     'chain()': {
 
-        'shoud chain methods': function(){
+        'should chain methods': function(){
             var test = _.chain([1, [2, 3], 4]).flatten().union([5, 6, 7]).value()
             buster.assert.equals(test, [1, 2, 3, 4, 5, 6, 7])
         },

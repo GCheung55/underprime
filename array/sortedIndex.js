@@ -1,7 +1,7 @@
 "use strict";
 
-var _ = require('../'),
-    list = require('../shell/array/sortedIndex')
+var _ = require('../')
+var array = require('../shell/array/sortedIndex')
 
-_.implement('sortedIndex', list)
+_.implement('sortedIndex', array)
 module.exports = _

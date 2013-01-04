@@ -1,7 +1,7 @@
 "use strict";
 
-var _ = require('../'),
-    list = require('../shell/array/max')
+var _ = require('../')
+var array = require('../shell/array/max')
 
-_.implement('max', list)
+_.implement('max', array)
 module.exports = _

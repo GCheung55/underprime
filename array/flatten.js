@@ -1,7 +1,7 @@
 "use strict";
 
-var _ = require('../'),
-    list = require('../shell/array/flatten')
+var _ = require('../')
+var array = require('../shell/array/flatten')
 
-_.implement('flatten', list)
+_.implement('flatten', array)
 module.exports = _

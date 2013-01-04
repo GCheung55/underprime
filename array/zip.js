@@ -1,9 +1,9 @@
 "use strict";
 
-var _ = require('../'),
-    list = require('../shell/array/zip'),
-    max = require('./max'),
-    pluck = require('./pluck')
+var _ = require('../')
+var array = require('../shell/array/zip')
+require('./max')
+require('./pluck')
 
-_.implement('zip', list)
+_.implement('zip', array)
 module.exports = _

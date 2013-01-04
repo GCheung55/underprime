@@ -1,7 +1,7 @@
 "use strict";
 
-var _ = require('../'),
-    list = require('../shell/array/lastIndexOf')
+var _ = require('../')
+var array = require('../shell/array/lastIndexOf')
 
-_.implement('lastIndexOf', list)
+_.implement('lastIndexOf', array)
 module.exports = _

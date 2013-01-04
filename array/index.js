@@ -1,7 +1,6 @@
 "use strict";
 
-var _ = require('../'),
-    list = require('../shell/array')
+var _ = require('../')
 
 require('./compact')
 require('./difference')

@@ -25,10 +25,11 @@ _.implement = function(name, shell){
     _[name] = shell[name]
     var proto = shell.prototype[name]
     _.prototype[name] = function(){
-        this._wrapped = arguments.length ?
+        var result = arguments.length ?
             proto.apply(this._wrapped, arguments) :
             proto.call(this._wrapped)
-        return this._chain ? this : this._wrapped
+        
+        return this._chain ? _.chain(result) : result
     }
 }
 

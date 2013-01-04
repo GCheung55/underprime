@@ -1,7 +1,7 @@
 "use strict";
 
-var _ = require('../'),
-    list = require('../shell/array/uniq')
+var _ = require('../')
+var array = require('../shell/array/uniq')
 
-_.implement('uniq', list)
+_.implement('uniq', array)
 module.exports = _

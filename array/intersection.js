@@ -1,9 +1,9 @@
 "use strict";
 
-var _ = require('../'),
-    list = require('../shell/array/intersection'),
-    uniq = require('./uniq')
+var _ = require('../')
+var array = require('../shell/array/intersection')
+require('./uniq')
 
 
-_.implement('intersection', list)
+_.implement('intersection', array)
 module.exports = _

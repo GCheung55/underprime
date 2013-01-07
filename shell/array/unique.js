@@ -6,4 +6,4 @@ list.implement({
     unique: list.prototype.uniq
 })
 
-module.exports = list
+module.exports = list.unique

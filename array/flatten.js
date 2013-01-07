@@ -1,7 +1,8 @@
 "use strict";
 
 var _ = require('../')
-var array = require('../shell/array/flatten')
+var array = require('prime/collection/list')
+var flatten = require('../shell/array/flatten')
 
 _.implement('flatten', array)
-module.exports = _
+module.exports = flatten

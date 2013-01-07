@@ -6,4 +6,4 @@ list.implement({
     head: list.prototype.first
 })
 
-module.exports = list
+module.exports = list.head

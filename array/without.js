@@ -1,8 +1,10 @@
 "use strict";
 
 var _ = require('../')
-var array = require('../shell/array/without')
-require('./difference')
+var array = require('prime/collection/list')
+var without = require('../shell/array/without')
+
+// require('./difference')
 
 _.implement('without', array)
-module.exports = _
+module.exports = without

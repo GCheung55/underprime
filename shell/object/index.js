@@ -1,8 +1,7 @@
 "use strict";
 
-var _ = require('../'),
-    hash = require('prime/collection/hash')
+var hash = require('prime/collection/hash')
 
 require('./pairs')
 
-module.exports = _
+module.exports = hash

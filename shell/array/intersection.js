@@ -2,7 +2,7 @@
 
 var list = require('prime/collection/list')
 
-var uniq = require('./uniq').uniq
+var uniq = require('./uniq')
 
 list.implement({
     intersection: function() {
@@ -15,4 +15,4 @@ list.implement({
     }
 })
 
-module.exports = list
+module.exports = list.intersection

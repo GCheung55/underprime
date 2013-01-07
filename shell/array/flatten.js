@@ -1,11 +1,10 @@
 "use strict";
 
-var array = require('prime/es5/array')
 var list = require('prime/collection/list')
 
 var flatten = function(input, shallow, output){
     list.forEach(input, function(value){
-        if (array.isArray(value)){
+        if (list.isArray(value)){
             if (shallow){
                 output.push.apply(output, value)
             } else {
@@ -24,4 +23,4 @@ list.implement({
     }
 })
 
-module.exports = list
+module.exports = list.flatten

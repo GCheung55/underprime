@@ -6,4 +6,4 @@ list.implement({
     tail: list.prototype.rest
 })
 
-module.exports = list
+module.exports = list.tail

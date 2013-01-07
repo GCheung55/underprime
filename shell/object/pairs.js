@@ -17,4 +17,4 @@ hash.implement({
     }
 })
 
-module.exports = hash
+module.exports = hash.pairs

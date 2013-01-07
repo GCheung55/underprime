@@ -6,4 +6,4 @@ list.implement({
     drop: list.prototype.rest
 })
 
-module.exports = list
+module.exports = list.drop

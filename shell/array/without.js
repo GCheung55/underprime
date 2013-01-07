@@ -1,7 +1,7 @@
 "use strict";
 
 var list = require('prime/collection/list')
-var difference = require('./difference').difference
+var difference = require('./difference')
 
 list.implement({
     without: function() {
@@ -9,4 +9,4 @@ list.implement({
     }
 })
 
-module.exports = list
+module.exports = list.without

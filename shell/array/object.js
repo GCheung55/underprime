@@ -20,4 +20,4 @@ list.implement({
     }
 })
 
-module.exports = list
+module.exports = list.object

@@ -1,16 +1,17 @@
 {
     "name": "underprime",
     "version": "0.0.0",
-    "description": "Underscore - Prime'd by MooTools Prime",
+    "description": "Underscore/Lodash - Prime'd by MooTools Prime",
     "main": "index.js",
     "repository": "",
     "author": "Garrick Cheung",
     "license": "MIT",
     "dependencies": {
-        "prime": "0.0.6"
+        "prime": "*"
     },
     "devDependencies": {
-        "buster": "*"
+        "buster": "*",
+        "buster-qunit": "https://api.github.com/repos/reebalazs/buster-qunit/tarball"
     },
     "scripts": {
         "test": "node_modules/.bin/buster-test"

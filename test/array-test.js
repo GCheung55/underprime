@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 
 var buster = require('buster')
 var list = require('../array')
@@ -204,32 +204,32 @@ buster.testCase('underprime - list', {
         }
     },
 
-    'max()': {
-        'can perform a regular Math.max': function(){
-            buster.assert.equals(3, _([1, 2, 3]).max())
-        },
+    // 'max()': {
+    //     'can perform a regular Math.max': function(){
+    //         buster.assert.equals(3, _([1, 2, 3]).max())
+    //     },
 
-        'can perform a computation-based max': function(){
-            var neg = _([1, 2, 3]).max(function(num){ return -num })
-            buster.assert.equals(neg, 1)
-        },
+    //     'can perform a computation-based max': function(){
+    //         var neg = _([1, 2, 3]).max(function(num){ return -num })
+    //         buster.assert.equals(neg, 1)
+    //     },
 
-        // 'Maximum value of an empty object': function(){
-        //     buster.assert.equals(-Infinity, _({}).max())
-        // },
+    //     // 'Maximum value of an empty object': function(){
+    //     //     buster.assert.equals(-Infinity, _({}).max())
+    //     // },
 
-        'Maximum value of an empty array': function(){
-            buster.assert.equals(-Infinity, _([]).max())
-        },
+    //     'Maximum value of an empty array': function(){
+    //         buster.assert.equals(-Infinity, _([]).max())
+    //     },
 
-        // 'Maximum value of a non-numeric collection': function(){
-        //     buster.assert.equals(_.max({'a': 'a'}), -Infinity)
-        // },
+    //     // 'Maximum value of a non-numeric collection': function(){
+    //     //     buster.assert.equals(_.max({'a': 'a'}), -Infinity)
+    //     // },
 
-        'Maximum value of a too-big array': function(){
-            buster.assert.equals(299999, _.max(_.range(1, 300000)))
-        }
-    },
+    //     'Maximum value of a too-big array': function(){
+    //         buster.assert.equals(299999, _.max(_.range(1, 300000)))
+    //     }
+    // },
 
     'object()': {
         'two arrays zipped together into an object': function(){

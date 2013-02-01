@@ -1,36 +1,17 @@
-"use strict";
+'use strict'
 
-var _ = function(obj){
-    if (obj == null || obj instanceof _) return obj
-    if (!(this instanceof _)) return new _(obj)
-    this._wrapped = obj
-}
+var prime = require('prime')
 
-_.chain = function(obj){
-    var o = new _(obj)
-    o._chain = true
-    return o
-}
+var _ = prime({
+    constructor: function(obj){
+        if (obj == null || obj instanceof _) return obj
+        if (!(this instanceof _)) return new _(obj)
+        this._wrapped = obj
+    },
 
-_.prototype.chain = function(){
-    this._chain = true
-    return this
-}
-
-_.prototype.value = _.prototype.valueOf = function(){
-    return this._wrapped
-}
-
-_.implement = function(name, shell){
-    _[name] = shell[name]
-    var proto = shell.prototype[name]
-    _.prototype[name] = function(){
-        var result = arguments.length ?
-            proto.apply(this._wrapped, arguments) :
-            proto.call(this._wrapped)
-        
-        return this._chain ? _.chain(result) : result
+    value: function(){
+        return this._wrapped
     }
-}
+})
 
 module.exports = _

@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 
 var buster = require('buster')
 var _ = require('../')

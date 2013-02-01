@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 
 var array = require('prime/es5/array'),
     function_ = require('prime/es5/function')

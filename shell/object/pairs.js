@@ -1,6 +1,6 @@
-"use strict";
+'use strict'
 
-var hash = require('prime/collection/hash')
+var hash = require('prime/shell/object')
 
 hash.implement({
     pairs: function(){

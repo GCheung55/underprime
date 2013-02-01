@@ -1,7 +1,7 @@
-"use strict";
+'use strict'
 
-var list = require('prime/collection/list')
-var hash = require('prime/collection/hash')
+var list = require('prime/shell/array')
+var hash = require('prime/shell/object')
 
 var max = require('./max')
 var pluck = require('./pluck')

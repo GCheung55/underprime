@@ -1,6 +1,6 @@
-"use strict";
+'use strict'
 
-var list = require('prime/collection/list')
+var list = require('prime/shell/array')
 
 var uniq = require('./uniq')
 

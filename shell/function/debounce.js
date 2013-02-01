@@ -1,4 +1,4 @@
-"use strict";
+'use strict'
 
 var function_ = require('prime/es5/function')
 

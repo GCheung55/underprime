@@ -7,4 +7,6 @@ mixinReturnUnwrapped.call(_, {
     template: require('../lib/functions/utility/template')
 })
 
+_.templateSettings = require('../lib/private/templateSettings')
+
 module.exports = _

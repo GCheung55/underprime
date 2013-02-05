@@ -4,7 +4,7 @@ var _ = require('../')
 var mixin = require('../lib/functions/utility/mixin')
 
 mixin.call(_, {
-    each: require('../lib/functions/collection/each')
+    each: require('./forEach').forEach
 })
 
 module.exports = _

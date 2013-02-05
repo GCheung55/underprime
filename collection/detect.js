@@ -4,7 +4,7 @@ var _ = require('../')
 var mixinReturnUnwrapped = require('../lib/util/mixinReturnUnwrapped')
 
 mixinReturnUnwrapped.call(_, {
-    detect: require('../lib/functions/collection/detect')
+    detect: require('./find').find
 })
 
 module.exports = _

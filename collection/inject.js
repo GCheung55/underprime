@@ -4,7 +4,7 @@ var _ = require('../')
 var mixinReturnUnwrapped = require('../lib/util/mixinReturnUnwrapped')
 
 mixinReturnUnwrapped.call(_, {
-    inject: require('../lib/functions/collection/inject')
+    inject: require('./reduce').reduce
 })
 
 module.exports = _

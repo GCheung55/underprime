@@ -4,7 +4,7 @@ var _ = require('../')
 var mixin = require('../lib/functions/utility/mixin')
 
 mixin.call(_, {
-    collect: require('../lib/functions/collection/collect')
+    collect: require('./map').map
 })
 
 module.exports = _

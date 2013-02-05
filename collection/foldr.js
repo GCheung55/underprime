@@ -4,7 +4,7 @@ var _ = require('../')
 var mixinReturnUnwrapped = require('../lib/util/mixinReturnUnwrapped')
 
 mixinReturnUnwrapped.call(_, {
-    foldr: require('../lib/functions/collection/foldr')
+    foldr: require('./reduceRight').reduceRight
 })
 
 module.exports = _

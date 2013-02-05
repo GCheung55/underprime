@@ -25,21 +25,6 @@ var _ = prime({
 var methods = {}
 var arrayRef = []
 
-/**
- * Detect if `Array#shift` and `Array#splice` augment array-like objects
- * incorrectly:
- *
- * Firefox < 10, IE compatibility mode, and IE < 9 have buggy Array `shift()`
- * and `splice()` functions that fail to remove the last element, `value[0]`,
- * of array-like objects even though the `length` property is set to `0`.
- * The `shift()` method is buggy in IE 8 compatibility mode, while `splice()`
- * is buggy regardless of mode in IE < 9 and buggy in compatibility mode in IE 9.
- */
-var hasObjectSpliceBug = (hasObjectSpliceBug = {
-    '0': 1,
-    'length': 1
-}, arrayRef.splice.call(hasObjectSpliceBug, 0, 1), hasObjectSpliceBug[0])
-
 // add `Array` functions that return unwrapped values
 prime.each(['join', 'pop', 'shift'], function(methodName) {
     var func = arrayRef[methodName]
@@ -64,6 +49,21 @@ prime.each(['concat', 'slice', 'splice'], function(methodName) {
         return this.constructor.call(null, (func.apply(this._wrapped, arguments)));
     };
 });
+
+/**
+ * Detect if `Array#shift` and `Array#splice` augment array-like objects
+ * incorrectly:
+ *
+ * Firefox < 10, IE compatibility mode, and IE < 9 have buggy Array `shift()`
+ * and `splice()` functions that fail to remove the last element, `value[0]`,
+ * of array-like objects even though the `length` property is set to `0`.
+ * The `shift()` method is buggy in IE 8 compatibility mode, while `splice()`
+ * is buggy regardless of mode in IE < 9 and buggy in compatibility mode in IE 9.
+ */
+var hasObjectSpliceBug = (hasObjectSpliceBug = {
+    '0': 1,
+    'length': 1
+}, arrayRef.splice.call(hasObjectSpliceBug, 0, 1), hasObjectSpliceBug[0])
 
 // avoid array-like object bugs with `Array#shift` and `Array#splice`
 // in Firefox < 10 and IE < 9

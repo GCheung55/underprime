@@ -1,6 +1,6 @@
 'use strict'
 
-var _ = require('../')
+var _ = require('../index')
 var mixin = require('../lib/functions/utility/mixin')
 var mixinReturnUnwrapped = require('../lib/util/mixinReturnUnwrapped')
 

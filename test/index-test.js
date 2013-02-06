@@ -1,7 +1,7 @@
 'use strict'
 
 var buster = require('buster')
-var _ = require('../')
+var _ = require('../index')
 var array = require('../array')
 
 buster.testCase('underprime', {

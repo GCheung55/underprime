@@ -2,7 +2,7 @@
 
 var buster = require('buster')
 var list = require('../array')
-var _ = require('../')
+var _ = require('../index')
 
 buster.testCase('underprime - list', {
 

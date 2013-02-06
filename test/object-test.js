@@ -2,7 +2,7 @@
 
 var buster = require('buster')
 var hash = require('../object')
-var _ = require('../')
+var _ = require('../index')
 
 buster.testCase('underprime - object', {
 

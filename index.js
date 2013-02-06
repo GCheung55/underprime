@@ -22,8 +22,8 @@ var _ = prime({
     }
 })
 
-var methods = {}
 var arrayRef = []
+var methods = {}
 
 // add `Array` functions that return unwrapped values
 prime.each(['join', 'pop', 'shift'], function(methodName) {
